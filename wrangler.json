@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-10-08",
+  "main": "src/index.ts",
+  "name": "api",
+  "upload_source_maps": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "bc271bb2-d319-41bd-89f5-d42203be2258",
+      "database_name": "baitul_hikmah"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
