@@ -22,10 +22,15 @@ export default {
         pengeluaran: 500000,
         saldo: 500000,
       };
+    } else if (path === '/hukum') {
+      data = [
+        { id: 1, kasus: "Pencurian", status: "Selesai" },
+        { id: 2, kasus: "Penipuan", status: "Dalam Proses" }
+      ];
     } else {
       data = {
         message: 'This is a web service API.',
-        endpoints: ['/pendidikan', '/sosial', '/keuangan'],
+        endpoints: ['/pendidikan', '/sosial', '/keuangan', '/hukum'],
         timestamp: new Date().toISOString(),
       };
     }
