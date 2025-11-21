@@ -1,5 +1,5 @@
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
     const path = url.pathname;
 
@@ -28,10 +28,8 @@ export default {
         { id: 2, kasus: "Penipuan", status: "Dalam Proses" }
       ];
     } else if (path === '/kesehatan') {
-      data = [
-        { id: 1, namaFasilitas: "Puskesmas A", jenis: "Puskesmas" },
-        { id: 2, namaFasilitas: "Rumah Sakit B", jenis: "Rumah Sakit" }
-      ];
+      const { results } = await env.DB.prepare('select * from rumah_sakit').all();
+      data = results;
     } else {
       data = {
         message: 'This is a web service API.',
