@@ -27,10 +27,15 @@ export default {
         { id: 1, kasus: "Pencurian", status: "Selesai" },
         { id: 2, kasus: "Penipuan", status: "Dalam Proses" }
       ];
+    } else if (path === '/kesehatan') {
+      data = [
+        { id: 1, namaFasilitas: "Puskesmas A", jenis: "Puskesmas" },
+        { id: 2, namaFasilitas: "Rumah Sakit B", jenis: "Rumah Sakit" }
+      ];
     } else {
       data = {
         message: 'This is a web service API.',
-        endpoints: ['/pendidikan', '/sosial', '/keuangan', '/hukum'],
+        endpoints: ['/pendidikan', '/sosial', '/keuangan', '/hukum', '/kesehatan'],
         timestamp: new Date().toISOString(),
       };
     }
